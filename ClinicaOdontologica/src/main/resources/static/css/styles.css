@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  background-color: #e1e5ea7c;
+}
+
+a {
+  text-decoration: none;
+  color:rgb(0, 0, 0);
+  transition: color .5s;
+}
+
+header nav a:hover {
+  color: rgba(168, 93, 136);
+}
+
+/*Header*/
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/ph.jpg");;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+header nav {
+  display: flex;
+  align-items: baseline;
+  padding: 30px;
+  font-weight: 400;
+  background-color: rgba(207, 207, 207, 0.7);
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+  padding-left: 30px;
+  font-weight: 800;
+}
+
+/*Body*/
+.div-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.div-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  margin: 10px;
+}
+
+.patient {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.dentist {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/*Form*/
+.form-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.patient-div {
+  height: 100%;
+}
+
+.form-container h2 {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.field {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  font-size: 15px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.field:focus {
+  outline: 2px solid rgb(168, 93, 136);
+}
+
+.save-button {
+  width: 100%;
+  font-weight: 700;
+  border: none;
+  border-radius: 2px;
+  padding: 15px;
+  color: #fff;
+  background-color: rgb(168, 93, 136);
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: rgb(91, 91, 170);
+}
+
+.create-button {
+  width: 150px;
+  font-weight: 700;
+  border: none;
+  border-radius: 2px;
+  padding: 15px;
+  margin: 10px;
+  color: #fff;
+  background-color: rgb(168, 93, 136);
+  transition: background-color .5s;
+  cursor: pointer;
+}
+
+.create-button:hover {
+  background-color: rgb(91, 91, 170);
+}
+
+/*Footer*/
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  color: #fff;
+  background-color: rgb(168, 93, 136);
+}
+
+.wrapper div {
+  padding: 20px;
+}
+
+.wrapper ul li {
+  display: flex;
+  list-style: none;
+}
+
+.one {
+  grid-column: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.bullet {
+  direction: rtl;
+}
