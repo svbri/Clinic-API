@@ -50,20 +50,20 @@ class AppointmentServiceTest {
         addressDTO.setState("CA");
     }
 
-//    @Test
-//    void create() throws ResourceNotFoundException {
-//        DentistDTO dentistDTO = dentistService.create(this.dentistDTO);
-//        PatientDTO patientDTO = patientService.create(this.patientDTO);
-//
-//        AppointmentDTO appointmentDTO = new AppointmentDTO();
-//        appointmentDTO.setPatient(patientDTO);
-//        appointmentDTO.setDentist(dentistDTO);
-//        appointmentDTO.setDate(LocalDate.now());
-//        AppointmentDTO appointmentDTO1 = appointmentService.create(appointmentDTO);
-//
-//        //Verifica que un objeto no sea null. Si lo es, tira un mensaje AssertionError
-//        assertNotNull(appointmentService.findById(appointmentDTO1.getId()));
-//    }
+    @Test
+    void create() throws ResourceNotFoundException {
+        DentistDTO dentistDTO = dentistService.create(this.dentistDTO);
+        PatientDTO patientDTO = patientService.create(this.patientDTO);
+
+        AppointmentDTO appointmentDTO = new AppointmentDTO();
+        appointmentDTO.setPatient(patientDTO);
+        appointmentDTO.setDentist(dentistDTO);
+        appointmentDTO.setDate(appointmentDTO.getDate());
+        AppointmentDTO appointmentDTO1 = appointmentService.create(appointmentDTO);
+
+        //Verifica que un objeto no sea null. Si lo es, tira un mensaje AssertionError
+        assertNotNull(appointmentService.findById(appointmentDTO1.getId()));
+    }
 
     @Test
     void findAll() {

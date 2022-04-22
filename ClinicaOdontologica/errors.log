@@ -2,3 +2,5 @@
 [2022-04-1902:41:55] [ ERROR] [GlobalExceptions:16] Paciente no encontrado con id : '1'
 [2022-04-1902:42:47] [ ERROR] [GlobalExceptions:16] Paciente no encontrado con id : '1'
 [2022-04-2113:46:48] [ ERROR] [GlobalExceptions:16] Paciente no encontrado con id : '2'
+[2022-04-2116:22:03] [ ERROR] [GlobalExceptions:16] Address no encontrado con id : '1'
+[2022-04-2116:29:05] [ ERROR] [GlobalExceptions:16] Odontólogo no encontrado con id : '1'

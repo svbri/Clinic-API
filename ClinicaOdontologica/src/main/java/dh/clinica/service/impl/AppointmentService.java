@@ -31,7 +31,7 @@ public class AppointmentService implements IAppointmentService {
     @Override
     public AppointmentDTO findById(Integer id) throws ResourceNotFoundException {
         Appointment appointment = appointmentRepository.findById(id)
-                .orElseThrow(()-> new ResourceNotFoundException("Appointment", "id", id));
+                .orElseThrow(()-> new ResourceNotFoundException("Turno", "id", id));
         return mapDTO(appointment);
     }
 
@@ -51,7 +51,11 @@ public class AppointmentService implements IAppointmentService {
     }
 
     @Override
-    public void deleteById(Integer id) {}
+    public void deleteById(Integer id) throws ResourceNotFoundException {
+        Appointment address = appointmentRepository.findById(id)
+                .orElseThrow(()-> new ResourceNotFoundException("Turno","id",id));
+        appointmentRepository.delete(address);
+    }
 
     @Override
     public AppointmentDTO update(AppointmentDTO appointmentDTO, Integer id) {

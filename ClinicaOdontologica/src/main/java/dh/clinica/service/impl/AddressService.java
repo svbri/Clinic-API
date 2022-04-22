@@ -24,7 +24,7 @@ public class AddressService implements IAddressService {
     @Override
     public AddressDTO findById(Integer id) throws ResourceNotFoundException {
         Address address = addressRepository.findById(id)
-                .orElseThrow(()-> new ResourceNotFoundException("Address","id",id));
+                .orElseThrow(()-> new ResourceNotFoundException("Dirección","id",id));
         return mapDTO(address);
     }
 
@@ -35,8 +35,10 @@ public class AddressService implements IAddressService {
     }
 
     @Override
-    public void deleteById(Integer id) {
-
+    public void deleteById(Integer id) throws ResourceNotFoundException {
+        Address address = addressRepository.findById(id)
+                .orElseThrow(()-> new ResourceNotFoundException("Dirección","id",id));
+        addressRepository.delete(address);
     }
 
     @Override

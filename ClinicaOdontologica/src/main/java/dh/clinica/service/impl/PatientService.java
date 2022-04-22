@@ -75,7 +75,7 @@ public class PatientService implements IPatientService {
 //        return mapDTO(newPatientSave);
 
         Patient patient = patientRepository.findById(id)
-                .orElseThrow((() -> new ResourceNotFoundException("Patient", "id", id)));
+                .orElseThrow((() -> new ResourceNotFoundException("Paciente", "id", id)));
 
         patient.setName(patientDTO.getName());
         patient.setLastname(patientDTO.getLastname());
